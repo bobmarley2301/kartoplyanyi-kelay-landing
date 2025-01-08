@@ -281,9 +281,9 @@
           navbar.classList.add("bg-[#3C6255]");
           navbar.classList.remove("bg-transparent");
         } else {
-          navbar.classList.remove("bg-[#3C6255]");
           navbar.classList.add("bg-transparent");
-          navLink.classList.remove("bg-[#3C6255]");
+          navbar.classList.remove("bg-[#3C6255]");
+          navLinks.classList.remove("bg-[#3C6255]");
         }
       });
     </script>
@@ -299,6 +299,7 @@
         // Toggle menu visibility
         if (navLinks.classList.contains("hidden")) {
           navLinks.classList.remove("hidden");
+          navLinks.classList.add("bg-[#3C6255]");
           navLinks.style.maxHeight = navLinks.scrollHeight + "px";
         } else {
           navLinks.style.maxHeight = "0";
