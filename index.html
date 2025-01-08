@@ -59,6 +59,7 @@
             id="line-3"
           ></span>
         </button>
+
         <!-- Navigation Links -->
         <ul
           id="nav-links"
@@ -67,8 +68,7 @@
           <li>
             <a
               href="#about"
-              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full shadow-md hover:shadow-xl"
-              style="font-family: 'Merriweather', serif"
+              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl "
             >
               Про нас
             </a>
@@ -76,8 +76,7 @@
           <li>
             <a
               href="#menu"
-              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full shadow-md hover:shadow-xl"
-              style="font-family: 'Merriweather', serif"
+              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl  "
             >
               Меню
             </a>
@@ -85,15 +84,75 @@
           <li>
             <a
               href="#contact"
-              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full shadow-md hover:shadow-xl"
-              style="font-family: 'Merriweather', serif"
+              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl "
             >
               Контакти
             </a>
           </li>
         </ul>
+
+        <!-- Social Media Icons -->
+        <div class="hidden md:flex space-x-6">
+          <!-- Facebook Icon -->
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-white hover:text-blue-600 transition-all duration-300"
+          >
+            <i class="fab fa-facebook-square text-2xl"></i>
+          </a>
+          <!-- Instagram Icon -->
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-white hover:text-pink-600 transition-all duration-300"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <!-- Twitter Icon -->
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            class="text-white hover:text-blue-400 transition-all duration-300"
+          >
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Social Media Icons in Burger Menu -->
+      <div id="burger-social" class="hidden md:hidden">
+        <div class="flex flex-col space-y-4 mt-4 text-center">
+          <!-- Facebook Icon -->
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-white hover:text-blue-600 transition-all duration-300"
+          >
+            <i class="fab fa-facebook-square text-2xl"></i>
+          </a>
+          <!-- Instagram Icon -->
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-white hover:text-pink-600 transition-all duration-300"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <!-- Twitter Icon -->
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            class="text-white hover:text-blue-400 transition-all duration-300"
+          >
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+        </div>
       </div>
     </nav>
+
+    <!-- Include Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- Hero Section -->
     <section
@@ -146,86 +205,197 @@
       </div>
     </section>
 
-    <!-- About Product Section -->
+    <!-- Переваги продукту -->
     <section
       class="py-16 px-4 sm:px-6 bg-white"
       data-aos="fade-up"
-      style="margin: 10% 0"
+      style="margin: 8% 0"
     >
       <h2
-        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-6"
+        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-12"
       >
         Що таке картопляний мелай?
       </h2>
+
+      <!-- Image Section -->
+      <div class="w-full max-w-3xl mx-auto mb-12">
+        <div
+          class="w-full h-96 bg-gray-200 rounded-xl overflow-hidden shadow-lg"
+        >
+          <img
+            src="assets/DSC_7947-30.jpg"
+            alt="Картопляний мелай"
+            class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      </div>
+
       <p
-        class="text-base sm:text-lg lg:text-xl text-gray-600 text-center max-w-2xl mx-auto leading-relaxed"
+        class="text-base sm:text-lg lg:text-xl text-gray-600 text-center max-w-3xl mx-auto leading-relaxed mb-12"
       >
-        Картопляний мелай — це унікальний вид випічки, створений за старовинними
-        рецептами Західної України. Соковита й ароматна випічка з картопляного
-        тіста чудово поєднується з борщем, домашніми закусками чи просто чашкою
-        гарячого чаю.
+        <i class="fas fa-quote-left text-xl mr-2 mb-4 mt-4"></i>
+        <span class="italic">
+          Картопляний мелай — це унікальний вид випічки, створений за
+          старовинними рецептами Західної України. Соковита й ароматна випічка з
+          картопляного тіста чудово поєднується з борщем, домашніми закусками чи
+          просто чашкою гарячого чаю.
+        </span>
+        <i class="fas fa-quote-right text-xl ml-2"></i>
       </p>
-      <div class="mt-12 grid gap-10 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div
-          class="text-center bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">
-            Натуральні інгредієнти
-          </h3>
-          <p class="text-gray-600">
-            Картопля, свіже борошно, натуральні спеції.
-          </p>
+
+      <h2
+        class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center text-gray-800 mb-6"
+      >
+        Переваги:
+      </h2>
+
+      <!-- Content and Image Section -->
+      <div
+        class="container mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
+      >
+        <!-- Text Section -->
+        <div class="text-center">
+          <div
+            class="bg-gradient-to-r from-purple-100 via-indigo-100 to-blue-100 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <i
+              class="fas fa-lemon text-4xl text-yellow-600 mb-4 animate-bounce"
+            ></i>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+              Натуральні інгредієнти
+            </h3>
+            <p class="text-gray-700">
+              Картопля, свіже борошно, натуральні спеції.
+            </p>
+          </div>
         </div>
-        <div
-          class="text-center bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">
-            Традиційне випікання
-          </h3>
-          <p class="text-gray-600">Використання старовинних методів.</p>
+
+        <div class="text-center">
+          <div
+            class="bg-gradient-to-r from-orange-100 via-yellow-100 to-yellow-200 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <i
+              class="fas fa-bread-slice text-4xl text-[#7D5A50] mb-4 animate-pulse"
+            ></i>
+            <!-- Колір хліба змінено на #7D5A50 -->
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+              Традиційне випікання
+            </h3>
+            <p class="text-gray-700">Використання старовинних методів.</p>
+          </div>
         </div>
-        <div
-          class="text-center bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">
-            Тривала свіжість
-          </h3>
-          <p class="text-gray-600">Зберігає м’якість і аромат.</p>
+
+        <div class="text-center">
+          <div
+            class="bg-gradient-to-r from-blue-100 via-blue-200 to-cyan-200 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <i
+              class="fas fa-thermometer-half text-4xl text-blue-600 mb-4 animate-pulse"
+            ></i>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+              Тривала свіжість
+            </h3>
+            <p class="text-gray-700">Зберігає м’якість і аромат.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="py-16 px-6 bg-green-100" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-center">
+    <section class="py-24 px-8 bg-green-100" data-aos="fade-up">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-16"
+        style="margin: 10% 0"
+      >
         5 причин спробувати наш мелай уже сьогодні!
       </h2>
-      <div class="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="space-y-12 md:space-y-16 container mx-auto text-center">
+        <!-- First Item -->
         <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold">Традиційний смак</h3>
-          <p>Рецепти, перевірені поколіннями.</p>
+          <div class="mb-6">
+            <div
+              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-cookie-bite text-3xl"></i>
+              <!-- Example Icon -->
+            </div>
+            <h3 class="text-3xl font-semibold text-green-800">
+              Традиційний смак
+            </h3>
+          </div>
+          <p class="text-xl text-gray-700">Рецепти, перевірені поколіннями.</p>
         </div>
+
+        <!-- Second Item -->
         <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-semibold">Натуральність</h3>
-          <p>Без консервантів і штучних додавок.</p>
+          <div class="mb-6">
+            <div
+              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-leaf text-3xl"></i>
+              <!-- Example Icon -->
+            </div>
+            <h3 class="text-3xl font-semibold text-green-800">Натуральність</h3>
+          </div>
+          <p class="text-xl text-gray-700">
+            Без консервантів і штучних добавок.
+          </p>
         </div>
+
+        <!-- Third Item -->
         <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-          <h3 class="text-xl font-semibold">Гарантія якості</h3>
-          <p>Контроль кожного етапу випікання.</p>
+          <div class="mb-6">
+            <div
+              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-check-circle text-3xl"></i>
+              <!-- Example Icon -->
+            </div>
+            <h3 class="text-3xl font-semibold text-green-800">
+              Гарантія якості
+            </h3>
+          </div>
+          <p class="text-xl text-gray-700">Контроль кожного етапу випікання.</p>
         </div>
+
+        <!-- Fourth Item -->
         <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-          <h3 class="text-xl font-semibold">Універсальність</h3>
-          <p>Ідеально підходить до будь-якого прийому їжі.</p>
+          <div class="mb-6">
+            <div
+              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-utensils text-3xl"></i>
+              <!-- Example Icon -->
+            </div>
+            <h3 class="text-3xl font-semibold text-green-800">
+              Універсальність
+            </h3>
+          </div>
+          <p class="text-xl text-gray-700">
+            Ідеально підходить до будь-якого прийому їжі.
+          </p>
         </div>
+
+        <!-- Fifth Item -->
         <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-          <h3 class="text-xl font-semibold">Швидка доставка</h3>
-          <p>Доставка за 24 години по Україні.</p>
+          <div class="mb-6">
+            <div
+              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-truck text-3xl"></i>
+              <!-- Example Icon -->
+            </div>
+            <h3 class="text-3xl font-semibold text-green-800">
+              Швидка доставка
+            </h3>
+          </div>
+          <p class="text-xl text-gray-700">Доставка за 24 години по Україні.</p>
         </div>
       </div>
     </section>
@@ -268,11 +438,16 @@
 
     <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!-- JavaScript -->
+    <!-- JavaScript for navbar and burger menu -->
     <script>
-      // Get navbar element
+      // Get navbar and navLinks elements
       const navbar = document.getElementById("navbar");
       const navLinks = document.getElementById("nav-links");
+      const burgerMenu = document.getElementById("burger-menu");
+      const burgerSocial = document.getElementById("burger-social"); // Social icons in burger menu
+      const line1 = document.getElementById("line-1");
+      const line2 = document.getElementById("line-2");
+      const line3 = document.getElementById("line-3");
 
       // Add event listener for scroll
       window.addEventListener("scroll", function () {
@@ -286,26 +461,19 @@
           navLinks.classList.remove("bg-[#3C6255]"); // Removed extra class removal
         }
       });
-    </script>
-
-    <!-- JavaScript for burger menu -->
-    <script>
-      const burgerMenu = document.getElementById("burger-menu");
-      const navLink = document.getElementById("nav-links");
-      const line1 = document.getElementById("line-1");
-      const line2 = document.getElementById("line-2");
-      const line3 = document.getElementById("line-3");
 
       burgerMenu.addEventListener("click", () => {
         // Toggle menu visibility
         if (navLinks.classList.contains("hidden")) {
           navLinks.classList.remove("hidden");
+          burgerSocial.classList.remove("hidden"); // Show social media icons in burger menu
           navLinks.style.maxHeight = `${navLinks.scrollHeight}px`; // Set max height dynamically
           setTimeout(() => {
             navLinks.style.maxHeight = "none"; // After animation, set max height to auto
           }, 500);
         } else {
           navLinks.style.maxHeight = "0"; // Set max height to 0 for closing the menu
+          burgerSocial.classList.add("hidden"); // Hide social media icons when closing
           setTimeout(() => navLinks.classList.add("hidden"), 500); // Match the duration of animation
         }
 
@@ -317,6 +485,7 @@
         line2.classList.toggle("opacity-0");
       });
     </script>
+
     <script>
       AOS.init({
         duration: 1000,
