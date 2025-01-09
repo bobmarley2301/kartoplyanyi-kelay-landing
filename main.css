@@ -1,4 +1,9 @@
 /* Стилі для акордеону */
+html{
+    scroll-behavior: smooth;
+    
+}
+
 .faq-item {
   margin-bottom: 10px;
 }
