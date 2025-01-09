@@ -1,0 +1,51 @@
+/* Стилі для акордеону */
+.faq-item {
+    margin-bottom: 10px;
+  }
+  
+  .faq-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+    border-radius: 0.5rem;
+  }
+  
+  .faq-title:hover {
+    background-color: #F4C430; /* Кольорова зміна при наведенні */
+    transform: scale(1.05); /* Легке збільшення кнопки при hover */
+  }
+  
+  .faq-title.open .faq-icon img {
+    transform: rotate(45deg); /* Іконка хліба обертається на хрестик */
+  }
+  
+  .faq-content {
+    display: none;
+    transition: all 0.3s ease-in-out;
+    padding-left: 20px;
+    background-color: #f7f7f7; /* Легкий фон для контенту */
+    border-radius: 0.5rem;
+  }
+  
+  /* Відкриття контенту */
+  .faq-title.open + .faq-content {
+    display: block; /* Відкриття контенту при натисканні */
+  }
+  
+  /* Анімація відкриття контенту */
+  .faq-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  /* Анімація появи контенту */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
