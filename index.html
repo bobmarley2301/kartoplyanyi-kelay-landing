@@ -7,6 +7,15 @@
     <title>Картопляний Мелай</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -68,7 +77,8 @@
           <li>
             <a
               href="#about"
-              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl "
+              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl uppercase"
+              style="font-family: 'Merriweather', serif"
             >
               Про нас
             </a>
@@ -76,7 +86,8 @@
           <li>
             <a
               href="#menu"
-              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl  "
+              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl uppercase"
+              style="font-family: 'Merriweather', serif"
             >
               Меню
             </a>
@@ -84,7 +95,8 @@
           <li>
             <a
               href="#contact"
-              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl "
+              class="block md:inline-block text-lg text-white hover:bg-red-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-full hover:shadow-xl uppercase"
+              style="font-family: 'Merriweather', serif"
             >
               Контакти
             </a>
@@ -151,13 +163,10 @@
       </div>
     </nav>
 
-    <!-- Include Font Awesome for social media icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
     <!-- Hero Section -->
     <section
       class="bg-yellow-200 text-center py-16 px-6 h-[100vh] flex flex-col justify-center bg-cover bg-center relative"
-      style="background-image: url('assets/DSC_8064-73.jpg')"
+      style="background-image: url('assets/hero.jpg')"
     >
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -223,7 +232,7 @@
           class="w-full h-96 bg-gray-200 rounded-xl overflow-hidden shadow-lg"
         >
           <img
-            src="assets/DSC_7947-30.jpg"
+            src="assets/about.jpg"
             alt="Картопляний мелай"
             class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
           />
@@ -307,113 +316,228 @@
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="py-24 px-8 bg-green-100" data-aos="fade-up">
-      <h2
-        class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-16"
-        style="margin: 10% 0"
+    <section
+      class="py-20 px-6 bg-gradient-to-r from-[#E8F4EA] via-[#FDECEF] to-[#E8F4EA]"
+      data-aos="fade-up"
+    >
+      <div
+        class="container mx-auto"
+        style="margin-top: 10%; margin-bottom: 10%"
       >
-        5 причин спробувати наш мелай уже сьогодні!
-      </h2>
-      <div class="space-y-12 md:space-y-16 container mx-auto text-center">
-        <!-- First Item -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="mb-6">
+        <!-- Заголовок -->
+        <h2
+          class="text-4xl sm:text-5xl font-bold text-center text-[#3C6255] mb-12"
+        >
+          <span
+            class="text-[#D23E30] text-6xl sm:text-7xl font-extrabold drop-shadow-md"
+          >
+            5
+          </span>
+          причин спробувати наш мелай уже сьогодні!
+        </h2>
+
+        <h3
+          class="text-4xl sm:text-5xl font-bold text-center text-[#3C6255] mb-12"
+        >
+          Чому обирають нас?
+        </h3>
+
+        <div class="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Картка -->
+          <div
+            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-2xl"
+            data-aos="fade-up"
+          >
             <div
-              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-[#3C6255] text-white rounded-full flex items-center justify-center mb-6"
             >
-              <i class="fas fa-cookie-bite text-3xl"></i>
-              <!-- Example Icon -->
+              <i class="fas fa-cookie-bite text-2xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold text-green-800">
+            <h3 class="text-2xl font-semibold text-[#7D5A50] mb-4">
               Традиційний смак
             </h3>
+            <p class="text-[#4A3A33] text-center">
+              Рецепти, перевірені поколіннями, дарують насолоду кожному.
+            </p>
           </div>
-          <p class="text-xl text-gray-700">Рецепти, перевірені поколіннями.</p>
-        </div>
-
-        <!-- Second Item -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="mb-6">
+          <!-- Картка -->
+          <div
+            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div
-              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-[#3C6255] text-white rounded-full flex items-center justify-center mb-6"
             >
-              <i class="fas fa-leaf text-3xl"></i>
-              <!-- Example Icon -->
+              <i class="fas fa-leaf text-2xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold text-green-800">Натуральність</h3>
+            <h3 class="text-2xl font-semibold text-[#7D5A50] mb-4">
+              Натуральність
+            </h3>
+            <p class="text-[#4A3A33] text-center">
+              Використовуємо лише натуральні інгредієнти без шкідливих домішок.
+            </p>
           </div>
-          <p class="text-xl text-gray-700">
-            Без консервантів і штучних добавок.
-          </p>
-        </div>
-
-        <!-- Third Item -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="mb-6">
+          <!-- Картка -->
+          <div
+            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div
-              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-[#3C6255] text-white rounded-full flex items-center justify-center mb-6"
             >
-              <i class="fas fa-check-circle text-3xl"></i>
-              <!-- Example Icon -->
+              <i class="fas fa-check-circle text-2xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold text-green-800">
+            <h3 class="text-2xl font-semibold text-[#7D5A50] mb-4">
               Гарантія якості
             </h3>
+            <p class="text-[#4A3A33] text-center">
+              Контролюємо кожен етап, щоб гарантувати найкращий результат.
+            </p>
           </div>
-          <p class="text-xl text-gray-700">Контроль кожного етапу випікання.</p>
-        </div>
-
-        <!-- Fourth Item -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-          <div class="mb-6">
+          <!-- Картка -->
+          <div
+            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div
-              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-[#3C6255] text-white rounded-full flex items-center justify-center mb-6"
             >
-              <i class="fas fa-utensils text-3xl"></i>
-              <!-- Example Icon -->
+              <i class="fas fa-utensils text-2xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold text-green-800">
+            <h3 class="text-2xl font-semibold text-[#7D5A50] mb-4">
               Універсальність
             </h3>
+            <p class="text-[#4A3A33] text-center">
+              Підходить до будь-якої події чи частування.
+            </p>
           </div>
-          <p class="text-xl text-gray-700">
-            Ідеально підходить до будь-якого прийому їжі.
-          </p>
-        </div>
-
-        <!-- Fifth Item -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-          <div class="mb-6">
+          <!-- Картка -->
+          <div
+            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div
-              class="w-20 h-20 rounded-full bg-green-800 text-white flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-[#3C6255] text-white rounded-full flex items-center justify-center mb-6"
             >
-              <i class="fas fa-truck text-3xl"></i>
-              <!-- Example Icon -->
+              <i class="fas fa-truck text-2xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold text-green-800">
+            <h3 class="text-2xl font-semibold text-[#7D5A50] mb-4">
               Швидка доставка
             </h3>
+            <p class="text-[#4A3A33] text-center">
+              Отримайте замовлення протягом 24 годин по всій Україні.
+            </p>
           </div>
-          <p class="text-xl text-gray-700">Доставка за 24 години по Україні.</p>
         </div>
       </div>
     </section>
 
     <!-- Gastronomic Ideas Section -->
-    <section class="py-16 px-6 bg-white" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-center">
-        Гастрономічні ідеї
-      </h2>
-      <div class="mt-8 grid gap-8 md:grid-cols-2">
-        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://via.placeholder.com/300" alt="Мелай зі сметаною" />
-          <p class="mt-4">Подайте з густою сметаною та зеленню.</p>
+    <section
+      class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F9FAFB] to-[#E8F4EA]"
+      style="margin: 10% 0"
+      data-aos="fade-up"
+    >
+      <div class="container mx-auto">
+        <!-- Заголовок -->
+        <h2
+          class="mb-6 text-4xl sm:text-5xl font-bold text-center text-[#3C6255] drop-shadow-md"
+        >
+          Гастрономічні ідеї
+        </h2>
+        <p class="mt-2 text-center text-lg sm:text-xl text-gray-600">
+          Насолоджуйтесь мелаєм у різних інтерпретаціях
+        </p>
+
+        <!-- Swiper Container -->
+        <div class="mt-12 swiper-container max-w-full md:max-w-6xl mx-auto">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide flex flex-col items-center text-center px-4 sm:px-6"
+            >
+              <img
+                src="assets/slider.jpg"
+                alt="Мелай зі сметаною"
+                class="rounded-lg shadow-xl w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <p class="mt-4 text-base sm:text-lg text-gray-700">
+                Подайте з густою сметаною та свіжою зеленню.
+              </p>
+            </div>
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide flex flex-col items-center text-center px-4 sm:px-6"
+            >
+              <img
+                src="assets/slider.jpg"
+                alt="Мелай із бринзою"
+                class="rounded-lg shadow-xl w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <p class="mt-4 text-base sm:text-lg text-gray-700">
+                Використовуйте як основу для канапок із бринзою.
+              </p>
+            </div>
+            <!-- Slide 3 -->
+            <div
+              class="swiper-slide flex flex-col items-center text-center px-4 sm:px-6"
+            >
+              <img
+                src="assets/slider.jpg"
+                alt="Мелай із чаєм"
+                class="rounded-lg shadow-xl w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <p class="mt-4 text-base sm:text-lg text-gray-700">
+                Насолоджуйтесь із чашкою гарячого чаю чи кави.
+              </p>
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <div
+            class="swiper-button-next text-[#3C6255] hover:scale-110 transition-transform duration-300"
+          ></div>
+          <div
+            class="swiper-button-prev text-[#3C6255] hover:scale-110 transition-transform duration-300"
+          ></div>
+          <!-- Pagination -->
+          <div class="swiper-pagination !bg-[#3C6255] rounded-full p-1"></div>
         </div>
-        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://via.placeholder.com/300" alt="Мелай із бринзою" />
-          <p class="mt-4">Використовуйте як основу для канапок із бринзою.</p>
-        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 px-6 bg-gradient-to-r from-[#F4C430] via-[#FFC857] to-[#F4C430] text-white"
+      data-aos="fade-up"
+    >
+      <div class="container mx-auto text-center max-w-4xl">
+        <!-- Заголовок -->
+        <h2
+          class="text-4xl sm:text-5xl font-bold text-[#3C6255] mb-6 leading-tight"
+        >
+          Мелай у меню вашого ресторану чи кафе
+        </h2>
+
+        <!-- Текст -->
+        <p class="text-lg sm:text-xl text-gray-800 mb-8 leading-relaxed">
+          Підніміть рівень свого меню за рахунок традиційної випічки!
+          Картопляний мелай ідеально підходить для карпатської тематики, закусок
+          або додаткових страв до перших страв.
+        </p>
+
+        <!-- Декоративна лінія -->
+        <div class="w-16 h-1 bg-[#D23E30] mx-auto mb-8"></div>
+
+        <!-- CTA Кнопка -->
+        <a
+          href="#gurtovi-umovy"
+          class="inline-block py-3 px-8 bg-[#D23E30] text-white font-semibold rounded-full shadow-lg hover:bg-[#B63428] transform hover:scale-105 transition duration-300"
+        >
+          Дізнатися про гуртові умови
+        </a>
       </div>
     </section>
 
@@ -438,6 +562,44 @@
 
     <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Include Swiper.js -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+
     <!-- JavaScript for navbar and burger menu -->
     <script>
       // Get navbar and navLinks elements
@@ -452,13 +614,13 @@
       // Add event listener for scroll
       window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
-          navbar.classList.add("bg-[#3C6255]");
+          navbar.classList.add("bg-[#7D5A50]");
           navbar.classList.remove("bg-transparent");
-          navLinks.classList.add("bg-[#3C6255]"); // Fixed to apply color to navLinks too
+          navLinks.classList.add("bg-[#7D5A50]"); // Fixed to apply color to navLinks too
         } else {
           navbar.classList.add("bg-transparent");
-          navbar.classList.remove("bg-[#3C6255]");
-          navLinks.classList.remove("bg-[#3C6255]"); // Removed extra class removal
+          navbar.classList.remove("bg-[#7D5A50]");
+          navLinks.classList.remove("bg-[#7D5A50]"); // Removed extra class removal
         }
       });
 
