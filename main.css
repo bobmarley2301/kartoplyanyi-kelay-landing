@@ -1,51 +1,108 @@
 /* Стилі для акордеону */
 .faq-item {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.faq-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.faq-title:hover {
+  background-color: #f4c430; /* Кольорова зміна при наведенні */
+  transform: scale(1.05); /* Легке збільшення кнопки при hover */
+}
+
+.faq-title.open .faq-icon img {
+  transform: rotate(45deg); /* Іконка хліба обертається на хрестик */
+}
+
+.faq-content {
+  display: none;
+  transition: all 0.3s ease-in-out;
+  padding-left: 20px;
+  background-color: #f7f7f7; /* Легкий фон для контенту */
+  border-radius: 0.5rem;
+}
+
+/* Відкриття контенту */
+.faq-title.open + .faq-content {
+  display: block; /* Відкриття контенту при натисканні */
+}
+
+/* Анімація відкриття контенту */
+.faq-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Анімація появи контенту */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  
-  .faq-title {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 1rem;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
-    border-radius: 0.5rem;
-  }
-  
-  .faq-title:hover {
-    background-color: #F4C430; /* Кольорова зміна при наведенні */
-    transform: scale(1.05); /* Легке збільшення кнопки при hover */
-  }
-  
-  .faq-title.open .faq-icon img {
-    transform: rotate(45deg); /* Іконка хліба обертається на хрестик */
-  }
-  
-  .faq-content {
-    display: none;
-    transition: all 0.3s ease-in-out;
-    padding-left: 20px;
-    background-color: #f7f7f7; /* Легкий фон для контенту */
-    border-radius: 0.5rem;
-  }
-  
-  /* Відкриття контенту */
-  .faq-title.open + .faq-content {
-    display: block; /* Відкриття контенту при натисканні */
-  }
-  
-  /* Анімація відкриття контенту */
-  .faq-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-  }
-  
-  /* Анімація появи контенту */
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  
+}
+
+/* Стилі для бургер-меню */
+#nav-links {
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden; /* Додаємо overflow: hidden для безпечної анімації */
+}
+
+#burger-menu {
+  position: relative;
+  z-index: 30; /* Переконайтеся, що бургер-меню має високий z-index */
+}
+
+#burger-menu span {
+  transition: transform 0.5s, opacity 0.5s;
+  z-index: 40; /* Забезпечує видимість іконок бургер-меню */
+}
+
+#burger-menu span.rotate-45 {
+  transform: rotate(45deg);
+}
+
+#burger-menu span.-rotate-45 {
+  transform: rotate(-45deg);
+}
+
+#burger-menu span.opacity-0 {
+  opacity: 0;
+}
+
+#burger-menu span.translate-y-[10px] {
+  transform: translateY(10px);
+}
+
+#burger-menu span.-translate-y-[10px] {
+  transform: translateY(-10px);
+}
+
+/* Відображення іконок соцмереж в бургер-меню */
+#burger-social {
+  display: none; /* За замовчуванням приховуємо соціальні іконки */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+  background-color: #3c6255; /* Колір фону, що підходить до меню */
+}
+
+#burger-social a {
+  display: block;
+  margin: 0.5rem 0;
+  text-align: center;
+  color: white;
+}
+
+#burger-social a:hover {
+  color: #f4c430; /* Колір на hover */
+}
