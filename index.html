@@ -32,7 +32,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    
+
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -444,6 +444,7 @@
         <div class="relative mt-12">
           <div
             class="slider-container overflow-hidden w-full md:max-w-6xl mx-auto"
+            style="height: 50vh"
           >
             <div
               class="slider-wrapper flex transition-transform duration-700 ease-in-out"
@@ -455,7 +456,8 @@
                 <img
                   src="assets/slider.jpg"
                   alt="Мелай зі сметаною"
-                  class="rounded-lg w-full h-auto sm:h-96 object-cover shadow-lg"
+                  class="rounded-lg w-full h-full object-cover"
+                  style="height: 50vh"
                 />
                 <p class="mt-4 text-lg sm:text-xl text-gray-700 font-medium">
                   Подайте з густою сметаною та свіжою зеленню.
@@ -468,7 +470,8 @@
                 <img
                   src="assets/slider1.jpg"
                   alt="Мелай із бринзою"
-                  class="rounded-lg w-full h-auto sm:h-96 object-cover shadow-lg"
+                  class="rounded-lg w-full h-full object-cover"
+                  style="height: 50vh"
                 />
                 <p class="mt-4 text-lg sm:text-xl text-gray-700 font-medium">
                   Використовуйте як основу для канапок із бринзою.
@@ -481,7 +484,8 @@
                 <img
                   src="assets/slider2.jpg"
                   alt="Мелай із чаєм"
-                  class="rounded-lg w-full h-auto sm:h-96 object-cover shadow-lg"
+                  class="rounded-lg w-full h-full object-cover"
+                  style="height: 50vh"
                 />
                 <p class="mt-4 text-lg sm:text-xl text-gray-700 font-medium">
                   Насолоджуйтесь із чашкою гарячого чаю чи кави.
@@ -491,33 +495,19 @@
           </div>
           <!-- Navigation Buttons -->
           <button
-            class="absolute top-1/2 left-2 transform -translate-y-1/2 px-3 py-2 text-white bg-[#3C6255] hover:bg-[#2C4D42] rounded-full shadow-md"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 px-3 py-2 text-white bg-[#3C6255] hover:bg-[#2C4D42] rounded-full"
             id="prevBtn"
             aria-label="Previous Slide"
           >
             &#10094;
           </button>
           <button
-            class="absolute top-1/2 right-2 transform -translate-y-1/2 px-3 py-2 text-white bg-[#3C6255] hover:bg-[#2C4D42] rounded-full shadow-md"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 px-3 py-2 text-white bg-[#3C6255] hover:bg-[#2C4D42] rounded-full"
             id="nextBtn"
             aria-label="Next Slide"
           >
             &#10095;
           </button>
-          <!-- Pagination -->
-          <div
-            class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3"
-          >
-            <span
-              class="dot w-3 h-3 bg-[#3C6255] rounded-full cursor-pointer transition duration-300 hover:bg-[#2C4D42]"
-            ></span>
-            <span
-              class="dot w-3 h-3 bg-[#3C6255] rounded-full cursor-pointer transition duration-300 hover:bg-[#2C4D42]"
-            ></span>
-            <span
-              class="dot w-3 h-3 bg-[#3C6255] rounded-full cursor-pointer transition duration-300 hover:bg-[#2C4D42]"
-            ></span>
-          </div>
         </div>
       </div>
     </section>
@@ -635,7 +625,7 @@
             data-aos-duration="800"
           >
             <div
-              class="w-20 h-20 bg-[#F4C430] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[#3C6255]"
+              class="w-20 h-20 bg-[#3C6255] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[#3C6255]"
             >
               <span class="text-2xl font-bold">1</span>
             </div>
@@ -651,7 +641,7 @@
             data-aos-delay="200"
           >
             <div
-              class="w-20 h-20 bg-[#F4C430] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[#3C6255]"
+              class="w-20 h-20 bg-[#3C6255] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[#3C6255]"
             >
               <span class="text-2xl font-bold">2</span>
             </div>
@@ -667,7 +657,7 @@
             data-aos-delay="400"
           >
             <div
-              class="w-20 h-20 bg-[#F4C430] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[#3C6255]"
+              class="w-20 h-20 bg-[#3C6255] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[#3C6255]"
             >
               <span class="text-2xl font-bold">3</span>
             </div>
