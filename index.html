@@ -596,9 +596,9 @@
     </section>
 
     <section
-      class="py-16 px-4 sm:px-6 lg:px-8"
+      class="relative py-16 px-4 sm:px-6 lg:px-8"
       id="order"
-      data-aos="fade-up"
+      
       style="
         margin: 10% 0;
         background-image: url('assets/FAQ.jpg');
@@ -607,13 +607,17 @@
         height: 100vh;
       "
     >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
       <div
-        class="container mx-auto h-full flex flex-col items-center justify-center"
+        class="relative container mx-auto h-full flex flex-col items-center justify-center"
       >
         <!-- Заголовок -->
         <h2
           class="mb-12 text-4xl sm:text-5xl font-bold text-center text-white tracking-wide"
-        >
+          data-aos="fade-up"
+          >
           Просто три кроки до свіжого мелая!
         </h2>
 
@@ -634,6 +638,7 @@
               Залиште заявку: натисніть кнопку “Замовити”.
             </p>
           </div>
+
           <!-- Крок 2 -->
           <div
             class="step flex flex-col items-center transition-transform transform hover:scale-105"
@@ -650,6 +655,7 @@
               Ми випікаємо: ваша випічка потрапляє до пекарні.
             </p>
           </div>
+
           <!-- Крок 3 -->
           <div
             class="step flex flex-col items-center transition-transform transform hover:scale-105"
@@ -911,8 +917,15 @@
             </div>
           </div>
         </div>
+        <div class="text-center border-gray-600 pt-8">
+          <a
+            href="policy.html"
+            class="text-white hover:text-[#F4C430] text-lg font-bold transition-colors duration-300 border-b-2"
+            >Політика конфіденційності</a
+          >
+        </div>
 
-        <div class="text-center mt-12 border-t pt-8">
+        <div class="text-center mt-12 border-t border-gray-600 pt-8">
           <p class="text-sm">© 2025 Всі права захищено</p>
         </div>
       </div>
