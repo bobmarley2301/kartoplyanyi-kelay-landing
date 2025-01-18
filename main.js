@@ -8,71 +8,62 @@ const line3 = document.getElementById("line-3");
 
 // Check if elements exist to avoid errors
 if (navbar && navLinks && burgerMenu && line1 && line2 && line3) {
+  // Function to update navbar background based on scroll and menu state
   const updateNavbarBackground = () => {
     const isMenuOpen = !navLinks.classList.contains("hidden");
     if (window.scrollY > 50 || isMenuOpen) {
-      // Add background color and update navbar when menu is open or scrolled
       navbar.classList.add("bg-[#3C6255]");
       navbar.classList.remove("bg-transparent");
       navLinks.classList.add("bg-[#3C6255]");
       navLinks.classList.remove("bg-black");
     } else {
-      // Revert navbar to transparent background when not scrolled and menu is closed
       navbar.classList.remove("bg-[#3C6255]");
       navbar.classList.add("bg-transparent");
       navLinks.classList.remove("bg-[#3C6255]");
-      
     }
   };
 
-  // Call the function initially to set the correct navbar state
-  updateNavbarBackground();
-
-  // Add scroll event listener to update navbar on scroll
-  window.addEventListener("scroll", updateNavbarBackground);
-
-  // Burger menu click event
-  burgerMenu.addEventListener("click", () => {
+  // Add smooth animation for navLinks height
+  const toggleNavLinks = () => {
     const isHidden = navLinks.classList.contains("hidden");
 
-    // Toggle visibility of navLinks with animation
     if (isHidden) {
       navLinks.classList.remove("hidden");
       navLinks.style.maxHeight = `${navLinks.scrollHeight}px`; // Animate opening
       setTimeout(() => {
-        navLinks.style.maxHeight = "none"; // After animation, set max height to auto
+        navLinks.style.maxHeight = "none"; // Reset height after animation
       }, 500);
       navbar.classList.add("bg-[#3C6255]");
       navLinks.classList.add("bg-[#3C6255]");
     } else {
-      // Animate closing with smooth transition
       navLinks.style.maxHeight = `${navLinks.scrollHeight}px`; // Start from full height
       setTimeout(() => {
         navLinks.style.maxHeight = "0"; // Animate closing
-      }, 0); // Set initial height to 0 for closing animation
+      }, 0);
 
-      // After animation, hide the menu
       setTimeout(() => {
-        navLinks.classList.add("hidden");
+        navLinks.classList.add("hidden"); // Hide menu after animation
+        navLinks.style.maxHeight = null; // Reset height
       }, 500);
 
-      // Remove background color if scroll position is at the top
       if (window.scrollY <= 50) {
         navbar.classList.remove("bg-[#3C6255]");
         navbar.classList.add("bg-transparent");
         navLinks.classList.remove("bg-[#3C6255]");
       }
     }
+  };
 
-    // Animate burger menu to cross
+  // Animate burger menu lines
+  const toggleBurgerMenu = () => {
     line1.classList.toggle("rotate-45");
     line1.classList.toggle("translate-y-[10px]");
     line3.classList.toggle("-rotate-45");
     line3.classList.toggle("-translate-y-[10px]");
     line2.classList.toggle("opacity-0");
-  });
+  };
 
-  // Function to add border to each li in navLinks
+  // Add border to navLinks items
   const addBorderToNavLinks = () => {
     const navItems = navLinks.querySelectorAll("li");
     navItems.forEach(item => {
@@ -80,6 +71,14 @@ if (navbar && navLinks && burgerMenu && line1 && line2 && line3) {
     });
   };
 
-  // Call the function to add border to navLinks items
+  // Event listeners
+  window.addEventListener("scroll", updateNavbarBackground);
+  burgerMenu.addEventListener("click", () => {
+    toggleNavLinks();
+    toggleBurgerMenu();
+  });
+
+  // Initial setup
+  updateNavbarBackground();
   addBorderToNavLinks();
 }

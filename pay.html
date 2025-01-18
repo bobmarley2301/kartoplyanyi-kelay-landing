@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold text-[#3C6255] mb-6 text-center">Оплата замовлення картопляного м'якуша</h1>
+
+        <form>
+            <!-- Введення імені -->
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-[#3C6255]">Ім'я</label>
+                <input type="text" id="name" name="name" placeholder="Ваше ім'я" required
+                       class="mt-1 block w-full px-4 py-2 border border-[#3C6255] rounded-lg shadow-sm focus:ring-[#3C6255] focus:border-[#3C6255]">
+            </div>
+
+            <!-- Введення email -->
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-[#3C6255]">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required
+                       class="mt-1 block w-full px-4 py-2 border border-[#3C6255] rounded-lg shadow-sm focus:ring-[#3C6255] focus:border-[#3C6255]">
+            </div>
+
+            <!-- Вибір методу оплати -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-[#3C6255]">Спосіб оплати</label>
+                <div class="flex items-center">
+                    <input type="radio" id="cash-on-delivery" name="payment-method" value="cash-on-delivery" class="mr-2">
+                    <label for="cash-on-delivery" class="text-sm text-[#3C6255]">Накладний платіж при отриманні на пошті</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="card-payment" name="payment-method" value="card-payment" class="mr-2">
+                    <label for="card-payment" class="text-sm text-[#3C6255]">Переказ на карту</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer" class="mr-2">
+                    <label for="bank-transfer" class="text-sm text-[#3C6255]">Переказ на рахунок ФОП</label>
+                </div>
+            </div>
+
+            <!-- Введення картки -->
+            <div id="card-info" class="mb-4 hidden">
+                <label for="card" class="block text-sm font-medium text-[#3C6255]">Номер картки</label>
+                <input type="text" id="card" name="card" placeholder="XXXX XXXX XXXX XXXX" pattern="\d{4} \d{4} \d{4} \d{4}"
+                       class="mt-1 block w-full px-4 py-2 border border-[#3C6255] rounded-lg shadow-sm focus:ring-[#3C6255] focus:border-[#3C6255]">
+                <small class="text-gray-500">Введіть 16 цифр картки через пробіли.</small>
+            </div>
+
+            <!-- Інформація для переказу на рахунок ФОП -->
+            <div id="bank-transfer-info" class="mb-4 hidden">
+                <h3 class="text-sm font-medium text-[#3C6255]">Банківські реквізити:</h3>
+                <ul class="list-disc pl-6">
+                    <li>Номер рахунку: 1234567890</li>
+                    <li>МФО: 123456</li>
+                    <li>IBAN: UA123456789012345678901234567890</li>
+                </ul>
+            </div>
+
+            <!-- Кнопка оплати -->
+            <button type="submit"
+                    class="w-full bg-[#3C6255] text-white font-semibold py-2 rounded-lg shadow-md hover:bg-[#4A7C67] focus:outline-none focus:ring-2 focus:ring-[#3C6255] focus:ring-offset-2 transition duration-300 ease-in-out">
+                Сплатити
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('input[name="payment-method"]').forEach((input) => {
+        input.addEventListener('change', (event) => {
+            const cardInfo = document.getElementById('card-info');
+            const bankTransferInfo = document.getElementById('bank-transfer-info');
+
+            if (event.target.value === 'card-payment') {
+                cardInfo.classList.remove('hidden');
+                bankTransferInfo.classList.add('hidden');
+            } else if (event.target.value === 'bank-transfer') {
+                bankTransferInfo.classList.remove('hidden');
+                cardInfo.classList.add('hidden');
+            } else {
+                cardInfo.classList.add('hidden');
+                bankTransferInfo.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

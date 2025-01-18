@@ -111,3 +111,17 @@ html{
 #burger-social a:hover {
   color: #f4c430; /* Колір на hover */
 }
+
+#nav-links {
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.nav-links {
+  transition: background-color 0.3s ease;
+}
+
