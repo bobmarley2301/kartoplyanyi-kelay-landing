@@ -7,6 +7,11 @@
     <title>Картопляний Мелай</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Підключення Animated.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
     <!-- Meta Pixel Code -->
     <script>
@@ -945,6 +950,64 @@
         </div>
       </div>
     </footer>
+    <!-- Затемнення фону та спливаюче повідомлення -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 transition-opacity duration-500 opacity-0"
+    ></div>
+
+    <div
+      id="price-popup"
+      class="fixed inset-0 flex items-center justify-center hidden z-50 animate__animated"
+    >
+      <div
+        class="bg-white text-gray-800 p-6 sm:p-8 shadow-xl rounded-lg relative w-80 sm:w-96 text-center transform"
+      >
+        <button
+          id="close-popup"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-xl"
+        >
+          &times;
+        </button>
+        <p class="text-lg sm:text-xl font-bold">1 шт. — 119 грн</p>
+        <p class="text-md sm:text-lg text-gray-600 mb-3">
+          Оптова ціна (від 10 шт.) — 99 грн
+        </p>
+        <a
+          href="#order"
+          class="block bg-red-500 text-white text-center py-2 px-4 rounded-lg shadow-md hover:bg-red-600 transition-all"
+          >Замовити зараз</a
+        >
+      </div>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        const popup = document.getElementById("price-popup");
+        const overlay = document.getElementById("overlay");
+        popup.classList.remove("hidden");
+        overlay.classList.remove("hidden", "opacity-0");
+        overlay.classList.add("opacity-100");
+        popup.classList.add("animate__fadeInDown");
+      }, 10000);
+
+      document
+        .getElementById("close-popup")
+        .addEventListener("click", closePopup);
+      document.getElementById("overlay").addEventListener("click", closePopup);
+
+      function closePopup() {
+        const popup = document.getElementById("price-popup");
+        const overlay = document.getElementById("overlay");
+        popup.classList.add("animate__fadeOutUp");
+        overlay.classList.add("opacity-0");
+        setTimeout(() => {
+          popup.classList.add("hidden");
+          overlay.classList.add("hidden");
+          popup.classList.remove("animate__fadeInDown", "animate__fadeOutUp");
+        }, 500);
+      }
+    </script>
 
     <script src="main.js"></script>
     <!-- AOS Script -->
